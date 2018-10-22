@@ -1,0 +1,34 @@
+<?php
+include "db.php";
+if(isset($_POST['submit']))
+{$fid = $_POST['fid'];
+$firstname = $_POST['FirstName'];
+$mn = $_POST['MiddleName'];
+$ln = $_POST['LastName'];
+
+}
+
+
+if($_POST['FirstName']==''||$_POST['MiddleName']==''||$_POST['LastName']==''||$_POST['fid']=='')
+{
+Print '<script>alert("Do Not leave any field empty!");</script>';
+Print '<script>window.location.assign("mainfac.html");</script>';
+}
+
+else {
+$query="insert into faculty (FID,FNAME,MNAME,LNAME) values('$fid','$firstname','$mn','$ln')";
+$res=mysql_query($query);
+
+
+if($res>0 )
+{
+Print '<script>alert("Successful");</script>';
+
+Print '<script>window.location.assign("mainstu.html");</script>';
+}
+else
+{Print '<script>alert("unSuccessful");</script>';
+}
+}
+
+?>

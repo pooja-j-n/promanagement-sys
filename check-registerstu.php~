@@ -1,0 +1,53 @@
+<?php
+	
+	
+	error_reporting(E_ALL ^ E_DEPRECATED);
+	
+	session_start();
+	
+	//include("functions.php");
+	
+	$username = $_POST['username'];
+	
+	
+	
+	$password = $_POST['password'];
+
+	$repassword = $_POST['repassword'];
+	
+	//Print '<script>alert('wewr');</script>';
+	
+	mysql_connect("localhost", "root","") or die(mysql_error());
+	mysql_select_db("projectmanagement") or die("Cannot connect to database");
+	if(isset($_REQUEST['submit'])!='')
+	{
+	if($_POST['username']==''||$_POST['password']==''||$_POST['repassword']=='')
+	{
+			Print '<script>alert("Do Not leave any field empty!");</script>';
+			Print '<script>window.location.assign("registerstu.htm");</script>';
+	}
+	
+
+	else if($password!=$repassword)
+	{
+			Print '<script>alert("Incorrect Password!");</script>';
+			Print '<script>window.location.assign("registerstu.htm");</script>';
+	}
+
+	else {
+	//$encoded = simple_encrypt($password, "secured");
+	$query="insert into `student_login` (`USN`,`PASSWORD`) values('$username','$password')";
+	$res=mysql_query($query);
+	if($res)
+	{
+		Print '<script>alert("Login successful");</script>';
+
+		Print '<script>window.location.assign("mainstu.html");</script>';
+	}
+	else { Print '<script>alert("query error:username exists");</script>';
+	Print '<script>window.location.assign("index.html");</script>'; }
+	}
+	
+	}
+
+?>

@@ -1,0 +1,62 @@
+<html>
+<head>
+
+<link href="main123.css" rel="stylesheet">
+<title>Marks</title>
+</head>
+
+<body>
+<div class="header">
+      <div class="left-align">
+        <img class="img-circle" src="rvlogo.png" alt="logo" height="50px" width="50px">
+		<h4><a class="header-text" href="index.html">Logout</a></h4>
+
+      </div>
+	  <div class="center-align"><p><h1 style="color:white">Project Management Portal</h1></p></div>
+      
+    </div>
+	<div id="outer">
+        <button class="button"><a href="addmarks.htm">
+		<div style="font-family:Monotype Corsiva;" >Add marks</div></a></button>
+
+        <button class="button"><a href="addrole.htm">
+		<div style="font-family:Monotype Corsiva;" >Add my role</div></a></button>
+
+       <button class="button"><a href="ados.htm">
+		<div style="font-family:Monotype Corsiva;" >Add schedule</div></a></button>
+       <button class="button"><a href="vp.htm">
+		
+		<div style="font-family:Monotype Corsiva;" >View projects</div></a></button>
+       <button class="button"><a href="vt.htm">
+		
+		<div style="font-family:Monotype Corsiva;" >View teams</div></a></button>
+
+    </div> 
+<form action="ados.php" method="POST">
+<fieldset>
+<p>
+    	<label for="pid">Project ID</label><br>
+      <input type="text" name="pid" id="pid">
+    </p>
+    <p>
+    	<label for="dos">Date of submission</label><br>
+      <input type="date" name="dos" id="dos" >
+    </p>
+    <p>
+    	<label for="dos">No of phases</label><br>
+      <input type="text" name="nop" id="nop" >
+    </p>
+	<p>
+    	<label for="dos">Current phase</label><br>
+      <input type="text" name="cp" id="cp" >
+    </p>
+    <br>
+    <input type="submit" name="submit" value="Submit">
+    </fieldset>
+   </form>
+   <div id="footer">
+        
+        <br><br><center><p>&copy; 2016 Department of ISE, RVCE </p></center>
+      </div>
+    </body>
+    </html>

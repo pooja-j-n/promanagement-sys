@@ -1,0 +1,174 @@
+<?php
+include "db.php";
+session_start();
+
+?>
+<html>
+<head>
+<title>Add a project </title>
+<link href="main123.css" rel="stylesheet">
+<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Crafty is a stunning HTML5/CSS3 multi-purpose template, well-coded, commented code and easy to customize"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main_responsive.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/carouFredSel.js"></script>
+	 
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="js/main.js"></script>
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+<header>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main_responsive.css">
+		<div class="wrapper">
+ <img class="img-circle" src="img/logo.jpg" alt="logo" height="50px" width="50px">
+			<a href="#" class="menu_icon" id="menu_icon"></a>
+			<nav id="nav_menu">
+				<ul>
+					<li><a href="addproj.htm" style="color:white;">Add Project</a></li>
+					<li><a href="#gallery" style="color:white;">View my Marks</a></li>
+					<li><a href="#contact" style="color:white;">View Project Schedule</a></li>
+					<li><a href="#contact" style="color:white;">View Courses</a></li>
+					<li><a href="#contact" style="color:white;">My Projects</a></li>
+									
+				</ul>
+				
+				
+			</nav>
+			<a href="#" class="menu_icon" id="menu_icon"></a>
+			<nav id="nav_menu">
+			
+					<?php  
+					
+	
+        if(isset($_SESSION["user"]))
+        {
+          echo "<ul><li style=\"color:white;\">Welcome</li>";
+		echo "<ul><li style=\"color:white;\">";
+		  echo $_SESSION['user'];
+			
+			
+          
+          echo '<a href="index.html"> Logout</a>';
+		  echo '</li></ul>';
+        }
+                  
+
+?>
+					
+									
+				
+				
+				
+			</nav>
+
+			
+		</div>
+	</header><!--  End Header  -->
+
+<form action="addproj.php" method="POST">
+  <fieldset>
+	<p> Team members <br>
+    <input type="radio" name="radio1" id="r1" value="Show" 
+
+onClick="getResults()">1 <br>
+
+    <input type="radio" name="radio2" id="r2" value="Nothing">2<br>
+
+<input type="radio" name="radio3" id="r3" value="Nothing">3<br>
+</p>
+</p>
+
+
+<div class="text1">
+    <p><label for="usn1">USN #1</label><br>
+        <input type="text" name="text11" id="text1"  maxlength="30">
+    </p>
+</div>
+
+
+<div class="text2">
+    <p>    	<label for="usn1">USN #1</label><br>
+
+        <input type="text" name="text21" id="text2" maxlength="30">
+    </p>
+</div>
+<div class="text2">
+    <p>    	<label for="usn">USN #2</label><br>
+
+        <input type="text" name="text22" id="text3" maxlength="30">
+    </p>
+</div>
+
+
+<div class="text3">
+    <p>    	<label for="usn">USN #1</label><br>
+
+        <input type="text" name="text31" id="text4" maxlength="30">
+    </p>
+</div>
+
+<div class="text3">
+    <p>    	<label for="for">USN #2</label><br>
+
+        <input type="text" name="text32" id="text5" maxlength="30">
+    </p>
+</div>
+<div class="text3">
+    <p>    	<label for="FirstName">USN #3</label><br>
+
+        <input type="text" name="text33" id="text6" maxlength="30">
+    </p>
+</div>
+
+   
+    <p>
+      <label for="ProjectTitle">Project Title</label><br>
+      <input type="text" name="ProjectTitle" id="projecttitle" >
+    </p>
+    <p>
+      <label for="CourseID">Course ID</label><br>
+      <input type="text" name="cid" id="Courseid" >
+    </p>
+    <p>
+      <label for="Repassword">Link</label><br>
+      <input type="text" name="link" id="link">
+    </p>
+	<br><br>
+   
+    <input type="submit" name="submit" value="Submit">
+    
+  </fieldset>
+</form>
+<script>
+$(document).ready(function () {
+    $(".text1").hide();$(".text2").hide();$(".text3").hide();
+    $("#r1").click(function () {
+        $(".text1").show(); $(".text2").hide();$(".text3").hide();
+    });
+    $("#r2").click(function () {
+        $(".text1").hide();$(".text3").hide();$(".text2").show();
+    });
+    $("#r3").click(function () {
+        $(".text1").hide();$(".text2").hide();$(".text3").show();
+    });
+});
+</script>
+
+<footer>
+		<img src="img/logo.jpg" alt="Crafty" height="70px" width="70px">
+		<p>R V Vidyanikethan Post
+<br>Mysuru Road Bengaluru - 560 059
+<br>Ph : 91 - 080-6717 8021
+<br>Fax: 91 - 080-2860 8011
+<br>Email : principal@rvce.edu.in</p>
+<br><br>
+        <center><p>&copy; 2016 Department of ISE, RVCE </p></center>
+		
+	</footer><!--  End Footer  -->
+</body>
+</html>

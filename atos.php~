@@ -1,0 +1,35 @@
+<?php
+
+include "db.php";
+$pid =$_POST['pid'];
+$dos =$_POST['dos'];
+
+if(isset($_REQUEST['submit'])!='')
+	{
+	if($_POST['pid']=='')
+	{
+			Print '<script>alert("Do Not leave any field empty!");</script>';
+			Print '<script>window.location.assign("viewmymarks.htm");</script>';
+	}
+	
+	
+	else
+	
+	{
+	$query="insert into schedule(PID,SUBMISSION_DATE) values('$pid','$dos') where PID=$pid";
+	$res=mysql_query($query);
+	if($res)
+	{
+		Print '<script>alert("successful");</script>';
+		$marks=mysql_fetch_array($res);
+		echo $marks['TMARKS'];
+	}
+	else
+	echo "unsuccessful ";
+	
+	}
+	
+	}
+	
+	
+	?>

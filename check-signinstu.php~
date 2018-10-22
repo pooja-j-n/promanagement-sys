@@ -1,0 +1,18 @@
+<?php
+	
+	$username =$_POST['user'];
+	$password =$_POST['pass'];
+	
+	include "db.php";
+	
+	$query = mysql_query("SELECT * from student_login WHERE USN='$username' and PASSWORD='$password'");
+	$exists = mysql_num_rows($query);
+
+	if($exists>0)
+	{
+		
+		header('Location: mainstu.html');
+	}
+	else
+		echo "heeeeee";
+?>
