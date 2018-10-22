@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>RVCE | Project Management Portal</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Crafty is a stunning HTML5/CSS3 multi-purpose template, well-coded, commented code and easy to customize"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link href="login.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/main_responsive.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/carouFredSel.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+	<header>
+		<div class="wrapper">
+ <img class="img-circle" src="img/logo.jpg" alt="logo" height="50px" width="50px">
+			<a href="#" class="menu_icon" id="menu_icon"></a>
+			<nav id="nav_menu">
+				<ul>
+					<li style="color:white; font-size:20px;">Project Management Portal</li>
+				</ul>
+			</nav>
+
+			
+		</div>
+	</header><!--  End Header  -->
+
+	<section class="billboard2">
+			<div id="login">
+<form action="check-registerstu.php" method="POST">
+  <fieldset>
+	   
+    <p>
+    	
+      <input type="text" name="username" placeholder="USN" pattern="[0-9][A-Za-z]{2}[0-9]{2}[A-Za-z]{2}[0-9]{3}" oninput="check0()"  id="USN">
+    </p><br>
+	<p>
+    	
+      <input type="text" name="fname" placeholder="First Name" pattern="[A-Za-z]{1,}" oninput="check1()" id="fname">
+    </p><br>
+	<p>
+    	
+      <input type="text" name="mname" placeholder="Middle Name" pattern="[A-Za-z]{1,}" oninput="check2()" id="mname">
+    </p><br>
+	<p>
+    	
+      <input type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z]{1,}" oninput="check3()" id="lname">
+    </p><br>
+	<p>
+    	
+      <input type="text" name="sem" placeholder="Semester" pattern="[1-8]" oninput="check4()"  id="sem">
+    </p><br>
+    <p>
+    
+      <input type="password" placeholder="Password" pattern=".{8,}" name="password" id="Password" >
+    </p><br>
+    <p>
+      
+      <input type="password" placeholder="Re-enter Password" pattern=".{8,}" name="repassword" id="Repassword">
+    </p><br><br><br>
+    <p style="color:white;" >Note: Password must contain at least 8 or more characters</p><br>
+    <input type="submit" name="submit" onclick="myFunction()" value="Submit">
+    <p><a href="siginstu.htm"><font size="3">Already have an account? Login here. </font></a></p>
+  </fieldset>
+</form>
+
+
+</div>
+	</section><!--  End Billboard  -->
+    
+	
+
+	<footer>
+		<img src="img/logo.jpg" alt="Crafty" height="70px" width="70px">
+		<p>R V Vidyanikethan Post
+<br>Mysuru Road Bengaluru - 560 059
+<br>Ph : 91 - 080-6717 8021
+<br>Fax: 91 - 080-2860 8011
+<br>Email : principal@rvce.edu.in</p>
+<br><br>
+        <center><p>&copy; 2016 Department of ISE, RVCE </p></center>
+		
+	</footer><!--  End Footer  -->
+<script>
+	 
+	   function check0()  
+      {   
+     var inpObj0 = document.getElementById("username");
+    		if (inpObj0.checkValidity() == false)
+        		alert("Invalid input!");
+      }
+function check1()  
+      {   
+     var inpObj1 = document.getElementById("fname");
+    		if (inpObj1.checkValidity() == false)
+        		alert("Invalid input! Name must consist of letters only");
+      }
+	  function check2()  
+      {   
+     var inpObj1 = document.getElementById("mname");
+    		if (inpObj1.checkValidity() == false)
+        		alert("Invalid input! Name must consist of letters only");
+      }
+	  function check3()  
+      {   
+     var inpObj1 = document.getElementById("lname");
+    		if (inpObj1.checkValidity() == false)
+        		alert("Invalid input! Name must consist of letters only");
+      }
+	    function check4()  
+      {   
+     var inpObj1 = document.getElementById("sem");
+    		if (inpObj1.checkValidity() == false)
+        		alert("Invalid input! Enter semester number in digits" );
+      }
+
+	  function myFunction()
+	{
+	var inpObj1 = document.getElementById("fname");
+	var inpObj2 = document.getElementById("mname");
+	var inpObj3 = document.getElementById("lname");
+	var inpObj4 = document.getElementById("sem");
+	var inpObj5 = document.getElementById("Password");
+	var inpObj6 = document.getElementById("Repassword");
+
+	
+	if (inpObj0.checkValidity() == false||inpObj1.checkValidity() == false||inpObj2.checkValidity() == false||inpObj3.checkValidity() == false||inpObj4.checkValidity() == false||inpObj5.checkValidity() == false||inpObj6.checkValidity() == false)
+		alert("Invalid data entered! Try again");
+	  }
+	  </script>
+</body>
+
+</html>

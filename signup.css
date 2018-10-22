@@ -1,0 +1,73 @@
+body {
+background-image:url(images/peach.jpg);
+font-family: "Monotype Corsiva";
+}
+
+a:link {color:#5a5656; text-decoration: none;}      /* unvisited link */
+a:visited {color:#5a5656; text-decoration: none;}  /* visited link */
+a:hover {color:#5a5656; text-decoration: underline;}  /* mouse over link */
+a:active {color:#5a5656;text-decoration: none;}  /* selected link */
+.grey{
+  color: #5a5656;
+}
+
+#home{
+padding-right:300px;
+color:white;
+
+}
+#signup {
+margin: 50px auto;
+width: 300px;
+}
+#signup>form>fieldset{
+  border:none;
+  background: #ffffff;
+}
+#header {
+    background-color:#4682B4;
+    color:white;
+    text-align:center;
+	height:30px;
+}
+#footer {
+	 position:fixed;
+ width:100%;
+    background-color:#4682B4;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	
+    bottom:0;
+     
+}
+
+
+
+
+
+
+
+form fieldset input[type="text"], input[type="password"], input[type="date"],input[type="email"] {
+background:#b6cee2;
+border: none;
+color: #5a5656;
+font-size: 15px;
+font-family: "Monotype Corsiva";
+height: 20px;
+width: 280px;
+padding: 10px;
+}
+.special{
+  width: 254px !important;
+}
+form fieldset input[type="submit"] {
+background:#4682B4 ;
+border: none;
+color: #000000;
+cursor: pointer;
+height: 50px;
+width: 300px;
+font-family: "Monotype Corsiva";
+font-size:20px;
+}

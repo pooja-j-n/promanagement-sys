@@ -1,0 +1,91 @@
+body {
+background-image:url(images/peach.jpg);
+font-family:  "lato_regular", arial;
+}
+
+a:link {color:#5a5656; text-decoration: none;}      /* unvisited link */
+a:visited {color:#5a5656; text-decoration: none;}  /* visited link */
+a:hover {color:#5a5656; text-decoration: underline;}  /* mouse over link */
+a:active {color:#5a5656;text-decoration: none;}  /* selected link */
+.grey{
+  color: #5a5656;
+  
+  
+}
+
+div#wrapperHeader {
+ width:100%;
+ height:200px; /* height of the background image? */
+ background:url(images/header.png) repeat-x 0 0;
+ text-align:center;
+}
+
+div#wrapperHeader div#header {
+
+ height:100px;
+ margin:0 auto;
+}
+
+div#wrapperHeader div#header img {
+ width:50px; /* the width of the logo image */
+ height:50px; /* the height of the logo image */
+ margin:0 auto;
+}
+.img-circle {
+    border-radius: 50%;
+}
+#signup {
+margin: 50px auto;
+width: 300px;
+}
+#signup>form>fieldset{
+  border-style:solid;
+  background: #ffffff;
+}
+#header {
+    background-color:#4682B4;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#footer {
+	 position:relative;
+ width:100%;
+    background-color:#4682B4;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	
+    bottom:0;
+     
+}
+
+
+
+
+
+
+
+form fieldset input[type="text"], input[type="password"], input[type="date"],input[type="email"] {
+background:#b6cee2;
+border: none;
+color: #5a5656;
+font-size: 15px;
+font-family:  "lato_regular", arial;
+height: 20px;
+width: 280px;
+padding: 10px;
+}
+.special{
+  width: 254px !important;
+}
+form fieldset input[type="submit"] {
+background:#4682B4 ;
+border: none;
+color: #000000;
+cursor: pointer;
+height: 50px;
+width: 300px;
+font-family: "lato_regular", arial;
+font-size:20px;
+}

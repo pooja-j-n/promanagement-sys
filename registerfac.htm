@@ -1,0 +1,103 @@
+
+<?php 
+include "db.php"
+
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User-Register</title>
+<link href="signup1.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapperHeader">
+ <div id="header">
+ <img class="img-circle" src="rvlogo.png" alt="logo" height="50px" width="50px">
+  <p><h3>RVCE Project Management Portal</h3></p>
+ </div> 
+<script src="snowflake.js"></script>
+<div id="signup">
+  <font size="4">Welcome! Please fill in the following details.</font>
+<form action="check-registerfac.php" method="POST">
+  <fieldset>
+	   
+    <p>
+    	<label for="fid">Faculty ID:</label>
+      <input type="text" name="username" id="fid">
+    </p>
+	<p>
+    	<label for="fname">First Name:</label>
+      <input type="text" name="fname"  pattern="[A-Za-z]{1,}" oninput="check1()" id="fname">
+    </p>
+	<p>
+    	<label for="mname">Middle Name:</label>
+      <input type="text" name="mname" pattern="[A-Za-z]{1,}" oninput="check2()" id="mname">
+    </p>
+	<p>
+    	<label for="lname">Last Name:</label>
+      <input type="text" name="lname" pattern="[A-Za-z]{1,}" oninput="check3()" id="lname">
+    </p>
+    <p>
+      <label for="Password">Password:</label>
+      <input type="password" pattern=".{6,}" name="password"  id="Password" >
+    </p>
+    <p>
+      <label for="Repassword">Re-enter your Password:</label>
+      <input type="password" pattern=".{6,}" name="repassword" id="Repassword">
+    </p>
+    <p class="grey">Note: Password must contain at least 6 or more characters</p>
+    <input type="submit" name="submit" value="Submit" onclick="myFunction()">
+	    <p><a href="siginfac.htm"><font size="3">Already have an account? Login here. </font></a></p>
+
+  </fieldset>
+</form>
+<div><p><a href="index.html"><font size="3">Return to home...</font></a></p></div>
+</div>
+<div id="footer">
+        
+        <br><br><center><p>&copy; 2016 Department of ISE, RVCE </p></center>
+      </div>
+	  <script>
+	 
+	   
+function check1()  
+      {   
+     var inpObj1 = document.getElementById("fname");
+    		if (inpObj1.checkValidity() == false)
+        		alert("Invalid input! Name must consist of letters only");
+      }
+	  function check2()  
+      {   
+     var inpObj1 = document.getElementById("mname");
+    		if (inpObj1.checkValidity() == false)
+        		alert("Invalid input! Name must consist of letters only");
+      }
+	  function check3()  
+      {   
+     var inpObj1 = document.getElementById("lname");
+    		if (inpObj1.checkValidity() == false)
+        		alert("Invalid input! Name must consist of letters only");
+      }
+	    
+
+	  function myFunction()
+	{
+	var inpObj1 = document.getElementById("fname");
+	var inpObj2 = document.getElementById("mname");
+	var inpObj3 = document.getElementById("lname");
+	var inpObj5 = document.getElementById("Password");
+	var inpObj6 = document.getElementById("Repassword");
+
+	
+	if (inpObj1.checkValidity() == false||inpObj2.checkValidity() == false||inpObj3.checkValidity() == false||inpObj5.checkValidity() == false||inpObj6.checkValidity() == false)
+		alert("Invalid data entered! Try again");
+	  }
+	  </script>
+	  
+</body>
+</html>

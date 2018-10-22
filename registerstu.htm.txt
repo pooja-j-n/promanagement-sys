@@ -1,0 +1,44 @@
+
+<?php 
+include "db.php"
+
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User-Register</title>
+<link href="signup.css" rel="stylesheet">
+</head>
+<body>
+<script src="snowflake.js"></script>
+<div id="signup">
+  <font size="4">Welcome! Please fill in the following details.</font>
+<form action="check-signup.php" method="POST">
+  <fieldset>
+	   
+    <p>
+    	<label for="USN">USN:</label>
+      <input type="text" name="username" id="USN">
+    </p>
+    <p>
+      <label for="Password">Password:</label>
+      <input type="password" name="password" id="Password" >
+    </p>
+    <p>
+      <label for="Repassword">Re-enter your Password:</label>
+      <input type="password" name="repassword" id="Repassword">
+    </p>
+    <p class="grey">Note: Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+    <input type="submit" name="submit" value="Submit">
+    <p><a href="login.php"><font size="3">Already have an account? Login here. </font></a></p>
+  </fieldset>
+</form>
+<div><p><a href="main.php"><font size="3">Return to home...</font></a></p></div>
+</div>
+</body>
+</html>

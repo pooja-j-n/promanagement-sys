@@ -1,0 +1,35 @@
+<html>
+<head>
+
+<link href="signup.css" rel="stylesheet">
+<title>Marks</title>
+</head>
+
+<body>
+<form action="vt.php" method="POST">
+<fieldset>
+<p>
+    	<label for="pid">Project ID</label><br>
+   
+	  <select name="pid" style="background-color: #B0C4DE";width:"20px";>
+	  <option value=""> </option>
+<?php 
+$sql = mysql_query("SELECT PID FROM project");
+if($sql)
+{
+
+while ($row = mysql_fetch_array($sql)){
+echo "<option value='$row[0]'>$row[0]</option>";
+}
+}
+else
+echo "error";
+?>
+</select>
+    </p>
+    <br>
+    <input type="submit" name="submit" value="Submit">
+    </fieldset>
+   </form>
+    </body>
+    </html>
